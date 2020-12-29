@@ -28,5 +28,12 @@ public class ForgotPasswordActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
+        RecoverBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }
