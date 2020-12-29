@@ -1,0 +1,47 @@
+package com.example.grocery;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class LoginActivity extends AppCompatActivity {
+
+    //UI views
+    private EditText emailEt,passwordEt;
+    private TextView forgotTv,notAccountTv;
+    private Button loginBtn;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+
+        //init UI views
+        emailEt = (EditText) findViewById(R.id.emailEt);
+        passwordEt = (EditText) findViewById(R.id.passwordEt);
+        forgotTv = (TextView) findViewById(R.id.forgotTv);
+        notAccountTv = (TextView) findViewById(R.id.notAccountTv);
+        loginBtn = (Button) findViewById(R.id.loginBtn);
+
+
+        notAccountTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this,RegisterUserActivity.class));
+
+            }
+        });
+
+        forgotTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this,ForgotPasswordActivity.class));
+            }
+        });
+    }
+}

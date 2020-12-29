@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/white">
+
+<!--    Toolbar-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:padding="10dp"
+        android:background="@drawable/shape_rec01">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Login"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/IconKey"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/shape_circle01"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/ic_key_white"
+        android:padding="5dp"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"/>
+    <EditText
+        android:id="@+id/emailEt"
+        android:layout_below="@id/IconKey"
+        android:hint="Email"
+        android:drawablePadding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/shape_rec02"
+        android:drawableLeft="@drawable/ic_mail_gray"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/passwordEt"
+        android:layout_below="@id/emailEt"
+        android:hint="Password"
+        android:drawablePadding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/shape_rec02"
+        android:drawableLeft="@drawable/ic_lock_gray"
+        android:inputType="textPassword"/>
+
+        <TextView
+            android:id="@+id/forgotTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:layout_margin="5dp"
+            android:layout_below="@id/passwordEt"
+            android:layout_alignParentRight="true" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:text="Login"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/forgotTv"/>
+    <TextView
+        android:id="@+id/notAccountTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not have account? Register"
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+         />
+
+
+
+</RelativeLayout>
