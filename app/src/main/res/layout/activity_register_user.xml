@@ -59,10 +59,7 @@
         app:c_border="true"
         app:c_border_color="@color/purple_700"
         app:c_border_width="2dp"
-        app:c_shadow="true"
-        app:c_shadow_color="#000"
-        app:c_shadow_gravity="end"
-        app:c_shadow_radius="5.5"
+
         />
 
     <EditText

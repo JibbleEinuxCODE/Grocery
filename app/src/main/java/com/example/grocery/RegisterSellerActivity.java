@@ -26,6 +26,7 @@ import android.os.PatternMatcher;
 import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -181,8 +182,8 @@ public class RegisterSellerActivity extends AppCompatActivity implements Locatio
             return;
         }
 
-        if (TextUtils.isEmpty(email)){
-            Toast.makeText(this,"Enter Email",Toast.LENGTH_SHORT).show();
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            Toast.makeText(this,"Invalid Email",Toast.LENGTH_SHORT).show();
             return;
         }
         if (password.length()<6){
